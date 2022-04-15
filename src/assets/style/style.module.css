@@ -1,0 +1,69 @@
+.btn{
+    border-radius: 10px;
+    background: #3082F7;
+    height: 50px;
+    padding: 0 40px;
+    outline: none;
+    border: none;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card{
+    width: 300px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background: #FFFFFF;
+    box-shadow: 0px 12px 30px rgba(125, 142, 166, 0.1), 0px 7.7037px 12.7407px rgba(125, 142, 166, 0.0607407), 0px 1.62963px 3.25926px rgba(125, 142, 166, 0.0607);
+    border-radius: 10px;
+    padding: 32px 20px;
+}
+
+.card h3{
+    text-align: center;
+    color: #3082F7;
+    font-weight: 800;
+    line-height: 130%;
+}
+
+.testimonialsCard{
+    background: #F5FAFA;
+    border-radius: 10px;
+    padding: 24px;
+    width: 330px !important;
+    height: 330px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: space-evenly;
+}
+
+.testimonialsCard > div > div h4{
+    width: 50%;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.sliderWrapper{
+    width: 75%;
+    height: auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: center;
+    margin: 5rem auto;
+}
+
+.sliderWrapper h4{
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+}
+
