@@ -28,6 +28,23 @@ section{
     margin: 0 auto;
 }
 
+@media screen and (max-width: 1780px){
+    .section1 > div > div{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin: 10rem !important;
+    }
+    
+    .section1ContentWrapper h1{
+           font-size: 45px !important;
+    }
+    .section1ContentWrapper h4{
+           font-size: 16px !important;
+    }
+}
+
 .section1ContentWrapper{
     width: 60%;
 }
