@@ -45,32 +45,6 @@ const Header = () => {
                                 </div>
                             </div>
                         </Fade>
-                        {
-                            showModal ? (
-                                <Modal>
-                                    <div className="getstarted-modal-wrapper">
-                                        <div className="getstarted-modal-left">
-                                            <img src={getStartedImg} alt="get started background image"/>
-                                        </div>
-                                        <div className="getstarted-modal-right">
-                                            <div>
-                                                <h1>Get Started</h1>
-                                                <h4>Leave your contact for the pre-purchase</h4>
-                                                <form action="">
-                                                    <Input title={'Name'}/>
-                                                    <Input title={'Phone Number'} type={'tel'}/>
-                                                    <Button text={'SEND'} styles={{width: '75%'}}/>
-                                                </form>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <img className="modal-close"
-                                         onClick={handleModal}
-                                         src={closeIcon}
-                                         alt="close"/>
-                                </Modal>
-                            ) : null
-                        }
                     </div>
                     <Fade right>
                         <div className={s.bgImage1}/>
@@ -101,59 +75,67 @@ const Header = () => {
                                 </HeadShake>
                             </div>
                         </Fade>
-                        {
-                            showModal ? (
-                                <Modal>
-                                    <Breakpoint customQuery="(min-width: 769px)">
-                                        <div className="getstarted-modal-wrapper">
-                                            <div className="getstarted-modal-left">
-                                                <img src={getStartedImg} alt="get started background image"/>
-                                            </div>
-                                            <div className="getstarted-modal-right">
-                                                <div>
-                                                    <h1>Get Started</h1>
-                                                    <h4>Leave your contact for the pre-purchase</h4>
-                                                    <form action="">
-                                                        <Input title={'Name'}/>
-                                                        <Input title={'Phone Number'} type={'tel'}/>
-                                                        <Button text={'SEND'} styles={{width: '75%'}}/>
-                                                    </form>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <img className="modal-close"
-                                             onClick={handleModal}
-                                             src={closeIcon}
-                                             alt="close"/>
-                                    </Breakpoint>
-                                    <Breakpoint customQuery="(max-width: 768px)">
-                                        <div className="getstarted-modal-wrapper-mobile">
-                                            <div>
-                                                <img src={getStartedImgMobile} alt="get started background image"/>
-                                            </div>
-                                            <div className="getstarted-bottom-content-mobile">
-                                                <div>
-                                                    <h1>Get Started</h1>
-                                                    <h4>Leave your contact for the pre-purchase</h4>
-                                                    <form action="">
-                                                        <Input title={'Name'}/>
-                                                        <Input title={'Phone Number'} type={'tel'}/>
-                                                        <Button text={'SEND'} styles={{width: '100%'}}/>
-                                                    </form>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <img className="modal-close"
-                                             onClick={handleModal}
-                                             src={closeIcon}
-                                             alt="close"/>
-                                    </Breakpoint>
-                                </Modal>
-                            ) : null
-                        }
                     </div>
                 </div>
             </Breakpoint>
+            {
+                showModal ? (
+                    <Modal>
+                        <Breakpoint customQuery="(min-width: 769px)">
+                            <div className="getstarted-modal-wrapper">
+                                <div className="getstarted-modal-left">
+                                    <img src={getStartedImg} alt="get started background image"/>
+                                </div>
+                                <div className="getstarted-modal-right">
+                                    <div>
+                                        <h1>Get Started</h1>
+                                        <h4>Leave your contact for the pre-purchase</h4>
+                                        <form action="">
+                                            <div className="contact-form-item">
+                                                <Input title={'Name'}/>
+                                            </div>
+                                            <div className="contact-form-item">
+                                                <Input title={'Phone Number'} type={'tel'}/>
+                                            </div>
+                                            <Button text={'SEND'} styles={{width: '75%'}}/>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <img className="modal-close"
+                                 onClick={handleModal}
+                                 src={closeIcon}
+                                 alt="close"/>
+                        </Breakpoint>
+                        <Breakpoint customQuery="(max-width: 768px)">
+                            <div className="getstarted-modal-wrapper-mobile">
+                                <div>
+                                    <img src={getStartedImgMobile} alt="get started background image"/>
+                                </div>
+                                <div className="getstarted-bottom-content-mobile">
+                                    <div>
+                                        <h1>Get Started</h1>
+                                        <h4>Leave your contact for the pre-purchase</h4>
+                                        <form action="">
+                                            <div className="contact-form-item">
+                                                <Input title={'Name'}/>
+                                            </div>
+                                            <div className="contact-form-item">
+                                                <Input title={'Phone Number'} type={'tel'}/>
+                                            </div>
+                                            <Button text={'SEND'} styles={{width: '100%'}}/>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <img className="modal-close"
+                                 onClick={handleModal}
+                                 src={closeIcon}
+                                 alt="close"/>
+                        </Breakpoint>
+                    </Modal>
+                ) : null
+            }
         </div>
     )
 }

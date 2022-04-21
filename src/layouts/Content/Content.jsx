@@ -47,8 +47,8 @@ import locationIcon from "../../assets/images/location-icon.svg";
 import SocialNetworks from "../../components/SocialNetworks";
 import Input from "../../components/Input";
 import closeIcon from "../../assets/images/close.svg";
-import closeDarkIcon from '../../assets/images/close-dark.svg'
 import getStartedImg from "../../assets/images/getstarted-img.svg";
+import getStartedImgMobile from "../../assets/images/getstarted-img-mobile.jpg";
 
 const Content = () => {
     const [showContactModal, setShowContactModal] = useState(false)
@@ -255,39 +255,6 @@ const Content = () => {
                             </HeadShake>
                         </div>
                     </Breakpoint>
-                    {
-                        showGetStartedModal ? (
-                            <Modal>
-                                <div className="getstarted-modal-wrapper">
-                                    <div className="getstarted-modal-left">
-                                        <LazyLoadImage
-                                            src={getStartedImg}
-                                            alt="Get Started"
-                                            visibleByDefault={true}
-                                            placeholderSrc={getStartedImg}
-                                            effect="blur"
-                                            threshold={200}
-                                        />
-                                    </div>
-                                    <div className="getstarted-modal-right">
-                                        <div>
-                                            <h1>Get Started</h1>
-                                            <h4>Leave your contact for the pre-purchase</h4>
-                                            <form action="">
-                                                <Input title={'Name'}/>
-                                                <Input title={'Phone Number'} type={'tel'}/>
-                                                <Button text={'SEND'} styles={{width: '75%'}}/>
-                                            </form>
-                                        </div>
-                                    </div>
-                                </div>
-                                <img className="modal-close"
-                                     onClick={handleGetStartedModal}
-                                     src={closeDarkIcon}
-                                     alt="close"/>
-                            </Modal>
-                        ) : null
-                    }
                 </section>
                 <section className={s.section4}>
                     <h2>Local companies that have already Washd</h2>
@@ -356,51 +323,6 @@ const Content = () => {
                                                 <Button text={'CONTACT US'} styles={{width: '50%'}}/>
                                             </HeadShake>
                                         </div>
-                                        {
-                                            showContactModal ? (
-                                                <Modal>
-                                                    <div className="contact-us-modal-wrapper">
-                                                        <div className="contact-us-modal-left">
-                                                            <h1>Contact us</h1>
-                                                            <h4>Fill up the form and our team will get back to you
-                                                                within 24 hours.</h4>
-                                                            <a href="#">
-                                                                <img src={mailIcon} alt="email"/>
-                                                                <p>contactl@gmail.com</p>
-                                                            </a>
-                                                            <a href="#">
-                                                                <img src={phoneIcon} alt="phone"/>
-                                                                <p>+143256987000</p>
-                                                            </a>
-                                                            <a href="#" style={{marginBottom: '4rem'}}>
-                                                                <img src={locationIcon} alt="location"/>
-                                                                <p>Norway, Address 8/1</p>
-                                                            </a>
-                                                            <SocialNetworks/>
-                                                        </div>
-                                                        <div className="contact-us-modal-right">
-                                                            <div className="contact-form-wrapper">
-                                                                <form action="">
-                                                                    <Input title={'Name'}/>
-                                                                    <Input title={'Email'} type={'email'}/>
-                                                                    <div>
-                                                                        <h5>Message</h5>
-                                                                        <textarea name="message" id="message" cols="25"
-                                                                                  rows="5" required/>
-                                                                    </div>
-                                                                    <Button text={'SEND MESSAGE'}
-                                                                            styles={{float: 'right'}}/>
-                                                                </form>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <img className="modal-close"
-                                                         onClick={handleContactModal}
-                                                         src={closeIcon}
-                                                         alt="close"/>
-                                                </Modal>
-                                            ) : null
-                                        }
                                     </div>
                                 </div>
                             </div>
@@ -448,6 +370,110 @@ const Content = () => {
                     </div>
                 </section>
             </Breakpoint>
+
+            {
+                showGetStartedModal ? (
+                    <Modal>
+                        <Breakpoint customQuery="(min-width: 769px)">
+                            <div className="getstarted-modal-wrapper">
+                                <div className="getstarted-modal-left">
+                                    <img src={getStartedImg} alt="get started background image"/>
+                                </div>
+                                <div className="getstarted-modal-right">
+                                    <div>
+                                        <h1>Get Started</h1>
+                                        <h4>Leave your contact for the pre-purchase</h4>
+                                        <form action="">
+                                            <div className="contact-form-item">
+                                                <Input title={'Name'}/>
+                                            </div>
+                                            <div className="contact-form-item">
+                                                <Input title={'Phone Number'} type={'tel'}/>
+                                            </div>
+                                            <Button text={'SEND'} styles={{width: '75%'}}/>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <img className="modal-close"
+                                 onClick={handleGetStartedModal}
+                                 src={closeIcon}
+                                 alt="close"/>
+                        </Breakpoint>
+                        <Breakpoint customQuery="(max-width: 768px)">
+                            <div className="getstarted-modal-wrapper-mobile">
+                                <div>
+                                    <img src={getStartedImgMobile} alt="get started background image"/>
+                                </div>
+                                <div className="getstarted-bottom-content-mobile">
+                                    <div>
+                                        <h1>Get Started</h1>
+                                        <h4>Leave your contact for the pre-purchase</h4>
+                                        <form action="">
+                                            <div className="contact-form-item">
+                                                <Input title={'Name'}/>
+                                            </div>
+                                            <div className="contact-form-item">
+                                                <Input title={'Phone Number'} type={'tel'}/>
+                                            </div>
+                                            <Button text={'SEND'} styles={{width: '100%'}}/>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <img className="modal-close"
+                                 onClick={handleGetStartedModal}
+                                 src={closeIcon}
+                                 alt="close"/>
+                        </Breakpoint>
+                    </Modal>
+                ) : null
+            }
+            {
+                showContactModal ? (
+                    <Modal>
+                        <div className="contact-us-modal-wrapper">
+                            <div className="contact-us-modal-left">
+                                <h1>Contact us</h1>
+                                <h4>Fill up the form and our team will get back to you
+                                    within 24 hours.</h4>
+                                <a href="#">
+                                    <img src={mailIcon} alt="email"/>
+                                    <p>contactl@gmail.com</p>
+                                </a>
+                                <a href="#">
+                                    <img src={phoneIcon} alt="phone"/>
+                                    <p>+143256987000</p>
+                                </a>
+                                <a href="#" style={{marginBottom: '4rem'}}>
+                                    <img src={locationIcon} alt="location"/>
+                                    <p>Norway, Address 8/1</p>
+                                </a>
+                                <SocialNetworks/>
+                            </div>
+                            <div className="contact-us-modal-right">
+                                <div className="contact-form-wrapper">
+                                    <form action="">
+                                        <Input title={'Name'}/>
+                                        <Input title={'Email'} type={'email'}/>
+                                        <div>
+                                            <h5>Message</h5>
+                                            <textarea name="message" id="message" cols="25"
+                                                      rows="5" required/>
+                                        </div>
+                                        <Button text={'SEND MESSAGE'}
+                                                styles={{float: 'right'}}/>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <img className="modal-close"
+                             onClick={handleContactModal}
+                             src={closeIcon}
+                             alt="close"/>
+                    </Modal>
+                ) : null
+            }
         </div>
     )
 }
