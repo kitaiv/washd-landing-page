@@ -1,6 +1,6 @@
 import {useEffect, useRef, useState} from "react";
 
-import { Breakpoint } from "react-socks";
+import {Breakpoint} from "react-socks";
 
 import HeadShake from 'react-reveal/HeadShake';
 
@@ -92,16 +92,22 @@ const Navigation = () => {
                                 <div className="contact-us-modal-right">
                                     <div className="contact-form-wrapper">
                                         <form action="">
-                                            <Input title={'Name'}/>
-                                            <Input title={'Email'} type={'email'}/>
-                                            <div>
+                                            <div className="contact-form-item">
+                                                <Input title={'Name'}/>
+                                            </div>
+                                            <div className="contact-form-item">
+                                                <Input title={'Email'} type={'email'}/>
+                                            </div>
+                                            <div className="contact-form-item">
                                                 <h5>Message</h5>
                                                 <textarea name="message" id="message" cols="25" rows="5" required/>
                                             </div>
                                             <Breakpoint customQuery="(min-width: 768px)">
                                                 <Button text={'SEND MESSAGE'} styles={{float: 'right'}}/>
                                             </Breakpoint>
-                                            <Button text={'SEND MESSAGE'} styles={{width: '100%'}}/>
+                                            <Breakpoint customQuery="(max-width: 768px)">
+                                                <Button text={'SEND MESSAGE'} styles={{width: '100%'}}/>
+                                            </Breakpoint>
                                         </form>
                                     </div>
                                 </div>
@@ -175,13 +181,6 @@ const Navigation = () => {
                 padding-right: 10px;
                 margin-top: 1.5rem;
                 font-size: 7vw;
-              }
-              
-              @media (max-width: 768px){
-                // #modal{
-                //   width: ${hamburgerOpen ? '100%' : 'auto'};
-                //   height: ${hamburgerOpen ? '100%' : 'auto'}
-                // }
               }
               
               @media (max-width: 425px){

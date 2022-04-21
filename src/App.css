@@ -231,7 +231,7 @@ footer{
     outline: none;
 }
 
-form div{
+.contact-form-item{
     border: 1px solid #EDEDED;
     box-sizing: border-box;
     border-radius: 10px;
@@ -239,7 +239,7 @@ form div{
     padding: .5rem
 }
 
-form div h5{
+.contact-form-item h5{
     margin: 0;
     font-weight: 400;
     font-size: 16px;
@@ -247,7 +247,7 @@ form div h5{
     color: #1B1F3B;
 }
 
-form div input{
+.contact-form-item input{
     font-family: 'Open Sans', sans-serif;
     outline: none;
     border: none;
@@ -265,7 +265,6 @@ form div input{
     justify-content: space-between;
     background: #121B3F;
     padding: 3rem;
-    flex-wrap: wrap;
 }
 
 .contact-us-modal-wrapper h1{
@@ -311,7 +310,6 @@ form div textarea{
 
 .contact-us-modal-left{
     width: max-content;
-    margin-right: 10rem;
 }
 
 .contact-us-modal-right{
@@ -398,10 +396,14 @@ form div textarea{
         padding: 1rem;
         flex-wrap: wrap;
     }
+
     .contact-us-modal-left{
-        margin: 1rem 0 0 0;
         width: auto;
         font-size: 4vw
+    }
+
+    .contact-us-modal-left p{
+        font-size: 2vw;
     }
 
     .contact-form-wrapper{
@@ -410,30 +412,27 @@ form div textarea{
     }
 
     .contact-us-modal-wrapper h1{
-        font-size: 8vw !important;
+        font-size: 5vw !important;
         margin: 0
     }
 
     .contact-us-modal-wrapper h4{
-        font-size: 3vw;
+        font-size: 2vw;
         margin: .5rem 0 0 0
     }
 
     .contact-us-modal-right{
-        margin-top: 2rem;
-    }
-
-    .socialNetworksWrapper{
         margin-top: 1rem;
     }
+
 
     .adressTextMobile{
         margin-top: 1rem;
     }
 
     .circle{
-        width: 20px;
-        height: 20px;
+        width: 14px;
+        height: 14px;
     }
 
     .emailMobile{
@@ -444,4 +443,27 @@ form div textarea{
         right: 15px !important
     }
 
+    form div h5{
+        font-size: small !important;
+    }
+
+    .contact-form-item{
+        padding: .2rem !important
+    }
+
+    .contact-form-item input{
+        font-size: small !important
+    }
+
+    form div textarea{
+        font-size: small !important
+    }
+
+    .socialNetworksWrapper{
+        margin-top: 1rem;
+    }
+
+    .contact-us-modal-wrapper a img{
+        width: 18px;
+    }
 }
