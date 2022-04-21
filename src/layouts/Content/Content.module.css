@@ -9,7 +9,7 @@ section{
 }
 
 .section1 div{
-    width: 50%;
+    width: 75%;
 }
 
 .section3{
@@ -25,24 +25,7 @@ section{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin: 0 auto;
-}
-
-@media screen and (max-width: 1780px){
-    .section1 > div > div{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        margin: 10rem !important;
-    }
-    
-    .section1ContentWrapper h1{
-           font-size: 45px !important;
-    }
-    .section1ContentWrapper h4{
-           font-size: 16px !important;
-    }
+    margin: 0 auto
 }
 
 .section1ContentWrapper{
@@ -58,6 +41,7 @@ section{
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    flex-wrap: wrap;
 }
 
 .howitworks1{
@@ -103,6 +87,26 @@ section{
     margin-top: 7rem;
 }
 
+.companiesContainerMobile img{
+    width: 100%;
+    margin-top: 3rem;
+}
+
+.companiesContainerMobile{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.companiesContainerMobile div{
+    display: inherit;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
 .section5 > h1{
     text-align: center;
 }
@@ -133,6 +137,10 @@ section{
     margin: 0 0 3rem 0;
 }
 
+.faqLeft{
+    margin: 0 0 3rem 0;
+}
+
 .faqRight{
     display: flex;
     width: 50%;
@@ -155,3 +163,137 @@ section{
     height: auto;
     margin-left: 50%;
 }
+
+
+/*//////RESPONSIVE//////*/
+
+
+@media screen and (max-width: 1780px){
+    .section1 > div > div{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+}
+
+@media only screen and (max-width: 767px){
+
+    .section1{
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .section1 div{
+        width: 100%;
+    }
+
+    .section1 > div > div{
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column;
+        margin: unset !important;
+    }
+
+    .cardsContainer div{
+        margin-top: 1rem;
+    }
+
+    section{
+        margin-bottom: 1rem;
+        margin-top: 30%;
+    }
+
+    .cardWrapper{
+        width: auto;
+        height: auto;
+        padding: 1rem;
+    }
+
+    .howitworks1{
+        flex-wrap: wrap;
+        margin-bottom: 0;
+    }
+
+    .howitworks1 div{
+        width: 100%;
+    }
+
+    .howitworks2{
+        flex-wrap: wrap;
+    }
+
+    .section6{
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+
+    .companiesContainer{
+        flex-wrap: wrap;
+    }
+
+    .faqRight{
+        width: 100%;
+    }
+
+    .faqSubHeader{
+        display: none;
+    }
+
+    .startWorkingWrapper{
+        margin-left: 0 !important
+    }
+
+    .mobilePadding{
+        padding: 1rem;
+    }
+
+    .companiesContainer div{
+        margin-bottom: 2rem;
+    }
+
+    .startWorkingWrapperMob{
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+    }
+
+    .startWorkingText{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        height: auto;
+        background: #E3E3E3;
+        overflow: hidden;
+        padding: 0 0 2rem 0;
+    }
+
+    .startWorkingText h1{
+        font-size: 3rem !important
+    }
+
+    .section7Mob{
+        margin-bottom: 0;
+    }
+}
+
+@media only screen and (max-width: 320px){
+
+    .startWorkingText{
+        margin-left: -7rem;
+    }
+}
+
+@media only screen and (max-width: 425px){
+    .startWorkingText h1{
+        font-size: 1.5rem !important
+    }
+
+    .startWorkingText{
+        margin-left: -7rem;
+    }
+}
+
+

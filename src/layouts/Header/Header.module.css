@@ -26,7 +26,7 @@
 
 .headerTitleWrapper{
     position: absolute;
-    left: 15%;
+    left: 7rem;
     top: 15%;
     z-index: 10;
     animation-fill-mode: inherit !important;
@@ -43,7 +43,8 @@
     display: flex;
     align-items: center;
     background: rgba(255, 255, 255, 0.63);
-    backdrop-filter: blur(12px);}
+    backdrop-filter: blur(12px);
+}
 
 .headerBlock{
     display: flex;
@@ -52,7 +53,7 @@
     margin-bottom: 10rem;
 }
 
-.headerTitle{
+.headerTitle {
     width: 70%;
 }
 
@@ -61,3 +62,51 @@
 /*    justify-content: center;*/
 /*    align-items: center;*/
 /*}*/
+
+
+.bluredBlockMobile{
+    width: 90%;
+    height: max-content;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.63);
+    backdrop-filter: blur(12px);
+    margin-top: 2rem;
+}
+
+.bluredBlockMobile > h1{
+    font-size: 8vw !important;
+    margin: 0 !important
+}
+
+.headerBlockMobile{
+    display: flex;
+    flex-direction: column;
+}
+
+.headerBlockMobile img{
+    float: right;
+    margin-top: 4rem;
+    width: 75%;
+}
+
+.headerTitleWrapperMobile{
+    position: absolute;
+    top: 7rem;
+    z-index: 10;
+    animation-fill-mode: inherit !important;
+}
+
+
+@media only screen and (max-width: 768px){
+    .headerWrapper{
+        padding: 1rem;
+    }
+}
+
+@media only screen and (min-width: 425px){
+    .headerBlockMobile img{
+        margin-top: 5rem;
+    }
+}

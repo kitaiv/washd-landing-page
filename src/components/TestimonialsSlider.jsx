@@ -3,6 +3,7 @@ import classnames from "classnames";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import s from '../assets/style/style.module.css'
+import "swiper/css/effect-coverflow";
 
 import userpic1 from '../assets/images/userpic-1.svg'
 import userpic2 from '../assets/images/userpic-2.svg'
@@ -10,7 +11,8 @@ import userpic3 from '../assets/images/userpic-3.svg'
 import leftbtnIcon from '../assets/images/left-btn-icon.svg'
 import rightbtnIcon from '../assets/images/right-btn-icon.svg'
 
-import { Navigation } from "swiper";
+import { Navigation, EffectCoverflow, Pagination } from "swiper";
+import {Breakpoint} from "react-socks";
 
 export default function TestimonialsSlider() {
     const testimonials = [
@@ -48,36 +50,78 @@ export default function TestimonialsSlider() {
 
     return(
         <>
-            <div className={s.sliderWrapper}>
-                <Swiper
-                    navigation={true}
-                    slidesPerView={3}
-                    spaceBetween={1}
-                    centeredSlides={true}
-                    pagination={{
-                        clickable: true,
-                    }}
-                    className="mySwiper"
-                    modules={[Navigation]}
-                    loop={true}
-                >
-                    {
-                        testimonials.map((el, key) => (
-                            <SwiperSlide key={key}>
-                                <div className={classnames(s.testimonialsCard)}>
-                                    <div className={s.testimonialHeader}>
-                                        <img src={el.icon} alt="avatar"/>
-                                        <h3>{el.name}</h3>
+            <Breakpoint customQuery="(min-width: 768px)">
+                <div className={s.sliderWrapper}>
+                    <Swiper
+                        navigation={true}
+                        slidesPerView={3}
+                        spaceBetween={2}
+                        centeredSlides={true}
+                        pagination={{
+                            clickable: true,
+                        }}
+                        className="mySwiper"
+                        modules={[Navigation]}
+                        loop={true}
+                    >
+                        {
+                            testimonials.map((el, key) => (
+                                <SwiperSlide key={key}>
+                                    <div className={classnames(s.testimonialsCard)}>
+                                        <div className={s.testimonialHeader}>
+                                            <img src={el.icon} alt="avatar"/>
+                                            <h3>{el.name}</h3>
+                                        </div>
+                                        <div>
+                                            <h4>{el.text}</h4>
+                                        </div>
                                     </div>
-                                    <div>
-                                        <h4>{el.text}</h4>
+                                </SwiperSlide>
+                            ))
+                        }
+                    </Swiper>
+                </div>
+            </Breakpoint>
+            <Breakpoint small down>
+                <div className={s.sliderWrapper}>
+                    <Swiper
+                        effect={"coverflow"}
+                        grabCursor={true}
+                        centeredSlides={true}
+                        slidesPerView={"auto"}
+                        coverflowEffect={{
+                            rotate: 50,
+                            stretch: 0,
+                            depth: 100,
+                            modifier: 1,
+                            slideShadows: true,
+                        }}
+                        modules={[EffectCoverflow, Pagination]}
+                        className="mySwiper"
+                        navigation={true}
+                        pagination={{
+                            clickable: true,
+                        }}
+                        loop={true}
+                    >
+                        {
+                            testimonials.map((el, key) => (
+                                <SwiperSlide key={key}>
+                                    <div className={classnames(s.testimonialsCard)}>
+                                        <div className={s.testimonialHeader}>
+                                            <img src={el.icon} alt="avatar"/>
+                                            <h3>{el.name}</h3>
+                                        </div>
+                                        <div>
+                                            <h4>{el.text}</h4>
+                                        </div>
                                     </div>
-                                </div>
-                            </SwiperSlide>
-                        ))
-                    }
-                </Swiper>
-            </div>
+                                </SwiperSlide>
+                            ))
+                        }
+                    </Swiper>
+                </div>
+            </Breakpoint>
         </>
     )
 

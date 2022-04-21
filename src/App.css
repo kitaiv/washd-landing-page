@@ -41,6 +41,10 @@ span{
     color: #3082F7;
 }
 
+.swiper-pagination-bullet-active{
+    --swiper-theme-color: #1B1F3B;
+}
+
 .swiper-slide {
 
     /* Center slide text vertically */
@@ -154,6 +158,7 @@ footer{
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    flex-wrap: wrap;
 }
 
 .top-level-footer a{
@@ -260,6 +265,7 @@ form div input{
     justify-content: space-between;
     background: #121B3F;
     padding: 3rem;
+    flex-wrap: wrap;
 }
 
 .contact-us-modal-wrapper h1{
@@ -354,3 +360,88 @@ form div textarea{
     width: 100%;
 }
 
+.getstarted-modal-wrapper-mobile{
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.getstarted-modal-wrapper-mobile img{
+    width: 335px;
+    height: 250px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.getstarted-bottom-content-mobile{
+    padding: 1rem;
+}
+
+.getstarted-bottom-content-mobile h1{
+    font-size: 8vw !important;
+}
+
+.getstarted-bottom-content-mobile h4{
+    font-size: 4vw !important;
+}
+
+@media only screen and (max-width: 768px){
+    .contact-us-modal-wrapper{
+        width: max-content;
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        background: #121B3F;
+        padding: 1rem;
+        flex-wrap: wrap;
+    }
+    .contact-us-modal-left{
+        margin: 1rem 0 0 0;
+        width: auto;
+        font-size: 4vw
+    }
+
+    .contact-form-wrapper{
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .contact-us-modal-wrapper h1{
+        font-size: 8vw !important;
+        margin: 0
+    }
+
+    .contact-us-modal-wrapper h4{
+        font-size: 3vw;
+        margin: .5rem 0 0 0
+    }
+
+    .contact-us-modal-right{
+        margin-top: 2rem;
+    }
+
+    .socialNetworksWrapper{
+        margin-top: 1rem;
+    }
+
+    .adressTextMobile{
+        margin-top: 1rem;
+    }
+
+    .circle{
+        width: 20px;
+        height: 20px;
+    }
+
+    .emailMobile{
+        margin-top: 1rem;
+    }
+
+    .modal-close{
+        right: 15px !important
+    }
+
+}
