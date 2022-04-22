@@ -26,8 +26,8 @@
 
 .headerTitleWrapper{
     position: absolute;
-    left: 7rem;
-    top: 15%;
+    left: 3rem;
+    top: 20%;
     z-index: 10;
     animation-fill-mode: inherit !important;
 }
@@ -44,6 +44,16 @@
     align-items: center;
     background: rgba(255, 255, 255, 0.63);
     backdrop-filter: blur(12px);
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1200px){
+    .bluredBlock{
+        width: 500px;
+    }
+}
+
+.bluredBlock h1{
+    font-size: 5vw;
 }
 
 .headerBlock{
@@ -108,5 +118,29 @@
 @media only screen and (min-width: 425px){
     .headerBlockMobile img{
         margin-top: 5rem;
+    }
+}
+
+/* 4k */
+@media only screen and (min-width: 2560px) {
+    .headerTitleWrapper{
+        position: absolute;
+        left: 35rem;
+        top: 15%;
+        z-index: 10;
+        animation-fill-mode: inherit !important;
+    }
+
+    .bluredBlock{
+        height: auto;
+        width: 850px;
+    }
+
+    .bluredBlock h1{
+        font-size: 3vw
+    }
+
+    .headerTitleWrapper{
+        top: 10%;
     }
 }

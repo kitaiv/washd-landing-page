@@ -184,6 +184,10 @@ section{
         flex-direction: column;
     }
 
+    .section1ContentWrapper h1 {
+        font-size: 38px;
+    }
+
     .section1 div{
         width: 100%;
     }
@@ -229,6 +233,10 @@ section{
         justify-content: flex-start;
     }
 
+    .section6 h1{
+        font-size: 38px;
+    }
+
     .companiesContainer{
         flex-wrap: wrap;
     }
@@ -271,7 +279,7 @@ section{
     }
 
     .startWorkingText h1{
-        font-size: 3rem !important
+        font-size: 35px
     }
 
     .section7Mob{
@@ -292,7 +300,7 @@ section{
     }
 
     .startWorkingText{
-        margin-left: -7rem;
+        margin-left: -30%;
     }
 }
 

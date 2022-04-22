@@ -8,6 +8,7 @@ import Rotate from 'react-reveal/Rotate';
 import Flip from 'react-reveal/Flip';
 import Roll from 'react-reveal/Roll';
 import Fade from 'react-reveal/Fade';
+import Zoom from 'react-reveal/Zoom';
 
 
 import s from './Content.module.css'
@@ -47,6 +48,7 @@ import locationIcon from "../../assets/images/location-icon.svg";
 import SocialNetworks from "../../components/SocialNetworks";
 import Input from "../../components/Input";
 import closeIcon from "../../assets/images/close.svg";
+import closeIconDark from '../../assets/images/close-dark.svg'
 import getStartedImg from "../../assets/images/getstarted-img.svg";
 import getStartedImgMobile from "../../assets/images/getstarted-img-mobile.jpg";
 
@@ -150,7 +152,7 @@ const Content = () => {
                 <Element name="service" className="element">
                     <section className={s.section2}>
                         <h1>How it works</h1>
-                        <Flip top>
+                        <Fade>
                             <div className={s.cardsContainer}>
                                 {
                                     cards.map((el, key) =>
@@ -158,7 +160,7 @@ const Content = () => {
                                     )
                                 }
                             </div>
-                        </Flip>
+                        </Fade>
                     </section>
                 </Element>
                 <section className={s.section3}>
@@ -286,7 +288,6 @@ const Content = () => {
                                         src={company1mobile}
                                         alt="Innovasion Norge"
                                     />
-                                    {/*<img src={company1} alt="Innovasion Norge"/>*/}
                                     <LazyLoadImage
                                         src={company2mobile}
                                     />
@@ -397,7 +398,7 @@ const Content = () => {
                             </div>
                             <img className="modal-close"
                                  onClick={handleGetStartedModal}
-                                 src={closeIcon}
+                                 src={closeIconDark}
                                  alt="close"/>
                         </Breakpoint>
                         <Breakpoint customQuery="(max-width: 768px)">
@@ -454,9 +455,13 @@ const Content = () => {
                             <div className="contact-us-modal-right">
                                 <div className="contact-form-wrapper">
                                     <form action="">
-                                        <Input title={'Name'}/>
-                                        <Input title={'Email'} type={'email'}/>
-                                        <div>
+                                        <div className="contact-form-item">
+                                            <Input title={'Name'}/>
+                                        </div>
+                                        <div className="contact-form-item">
+                                            <Input title={'Email'} type={'email'}/>
+                                        </div>
+                                        <div className="contact-form-item">
                                             <h5>Message</h5>
                                             <textarea name="message" id="message" cols="25"
                                                       rows="5" required/>

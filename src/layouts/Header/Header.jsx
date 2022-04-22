@@ -12,6 +12,7 @@ import Modal from "../../components/Modal";
 import Input from "../../components/Input";
 
 import closeIcon from "../../assets/images/close.svg";
+import closeIconDark from "../../assets/images/close-dark.svg"
 import getStartedImg from '../../assets/images/getstarted-img.svg'
 import getStartedImgMobile from '../../assets/images/getstarted-img-mobile.jpg'
 import headerImageMobile from '../../assets/images/header-image-mobile.jpg'
@@ -104,7 +105,7 @@ const Header = () => {
                             </div>
                             <img className="modal-close"
                                  onClick={handleModal}
-                                 src={closeIcon}
+                                 src={closeIconDark}
                                  alt="close"/>
                         </Breakpoint>
                         <Breakpoint customQuery="(max-width: 768px)">

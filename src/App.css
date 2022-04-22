@@ -1,3 +1,7 @@
+h1, h2, h3, h4, h5, p{
+    margin: 0 !important
+}
+
 a{
     color: #121B3F;
     text-decoration: none;
@@ -10,7 +14,7 @@ button{
 }
 
 h1{
-    font-size: 68px;
+    font-size: 4vw;
     font-style: normal;
     font-weight: bold;
     line-height: 110%;
@@ -32,7 +36,7 @@ h4{
     color: rgba(27, 31, 59, 0.65);
     font-style: normal;
     font-weight: 400;
-    font-size: 18px;
+    font-size: 16px;
     line-height: 150%;
 }
 
@@ -278,7 +282,7 @@ footer{
 
 .contact-us-modal-wrapper a{
     color: white;
-    display: flex
+    display: flex;
 }
 
 .contact-us-modal-wrapper a img{
@@ -321,7 +325,7 @@ form div textarea{
 }
 
 .getstarted-modal-wrapper{
-    width: initial;
+    width: max-content;
     height: auto;
     display: flex;
     flex-direction: row;
@@ -336,7 +340,10 @@ form div textarea{
 }
 
 .getstarted-modal-right{
-    padding: 3rem 6rem 3rem 6rem;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    padding: 4rem;
 }
 
 .getstarted-modal-right h4{
@@ -362,12 +369,11 @@ form div textarea{
     display: flex;
     flex-direction: column;
     background: #fff;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
+    border-radius: 10px;
 }
 
 .getstarted-modal-wrapper-mobile img{
-    width: 335px;
+    width: 100%;
     height: 250px;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
@@ -378,14 +384,21 @@ form div textarea{
 }
 
 .getstarted-bottom-content-mobile h1{
-    font-size: 8vw !important;
+    font-size: 8vw;
 }
 
 .getstarted-bottom-content-mobile h4{
-    font-size: 4vw !important;
+    font-size: 4vw;
 }
 
 @media only screen and (max-width: 768px){
+    .modal-close{
+        top: 18px;
+    }
+    .contact-us-modal-wrapper a{
+        margin-top: .5rem;
+    }
+
     .contact-us-modal-wrapper{
         width: max-content;
         height: fit-content;
@@ -403,7 +416,7 @@ form div textarea{
     }
 
     .contact-us-modal-left p{
-        font-size: 2vw;
+        font-size: 16px;
     }
 
     .contact-form-wrapper{
@@ -412,23 +425,20 @@ form div textarea{
     }
 
     .contact-us-modal-wrapper h1{
-        font-size: 5vw !important;
+        font-size: 6vw !important;
         margin: 0
     }
 
     .contact-us-modal-wrapper h4{
         font-size: 2vw;
-        margin: .5rem 0 0 0
+        margin: .5rem 0 0 0 !important;
+        
     }
 
     .contact-us-modal-right{
         margin-top: 1rem;
     }
 
-
-    .adressTextMobile{
-        margin-top: 1rem;
-    }
 
     .circle{
         width: 14px;
@@ -448,7 +458,7 @@ form div textarea{
     }
 
     .contact-form-item{
-        padding: .2rem !important
+        padding: .5rem !important
     }
 
     .contact-form-item input{
@@ -465,5 +475,28 @@ form div textarea{
 
     .contact-us-modal-wrapper a img{
         width: 18px;
+    }
+
+    .getstarted-bottom-content-mobile h1{
+        font-size: 6vw;
+        margin: 0
+    }
+
+    .getstarted-bottom-content-mobile h4{
+        font-size: 2.5vw
+    }
+
+    .getstarted-modal-wrapper-mobile > div{
+        border-radius: 10px;
+    }
+
+    .getstarted-modal-wrapper-mobile{
+        width: 350px;
+    }
+}
+
+@media only screen and (max-width: 375px){
+    .getstarted-modal-wrapper-mobile{
+        width: 300px;
     }
 }
