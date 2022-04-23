@@ -163,7 +163,7 @@ section{
     -o-background-size: cover;
     background-size: cover;
     width: 100%;
-    height: 30rem;
+    height: 25rem;
     padding-top: 10rem;
     margin-bottom: 0 !important;
 }
@@ -184,6 +184,17 @@ section{
         justify-content: center;
         align-items: center;
         flex-direction: column;
+    }
+}
+
+@media only screen and (min-width: 767px) and (max-width:1360px){
+    .section7{ 
+        height: auto !important;
+        padding: 4rem !important
+    }
+
+    .startWorkingWrapper{
+        margin-bottom: 0 !important;
     }
 }
 

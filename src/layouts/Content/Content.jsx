@@ -305,7 +305,7 @@ const Content = () => {
           </Breakpoint>
         </section>
       </div>
-                    
+
       <section className={s.section5}>
         <h1>What clients say about Washd</h1>
         <TestimonialsSlider />
@@ -452,10 +452,10 @@ const Content = () => {
             <div className="contact-us-modal-left">
               <h1>Contact us</h1>
               <h4>
-                Fill up the form and our team will get back to you within 24
-                hours.
+                Fill up the form and our team will get <br /> back to you within
+                24 hours.
               </h4>
-              <a href="#">
+              <a href="#" className="emailMobile">
                 <img src={mailIcon} alt="email" />
                 <p>contactl@gmail.com</p>
               </a>
@@ -463,7 +463,7 @@ const Content = () => {
                 <img src={phoneIcon} alt="phone" />
                 <p>+143256987000</p>
               </a>
-              <a href="#" style={{ marginBottom: "4rem" }}>
+              <a href="#" className="adressTextMobile">
                 <img src={locationIcon} alt="location" />
                 <p>Norway, Address 8/1</p>
               </a>
@@ -480,15 +480,14 @@ const Content = () => {
                   </div>
                   <div className="contact-form-item">
                     <h5>Message</h5>
-                    <textarea
-                      name="message"
-                      id="message"
-                      cols="25"
-                      rows="5"
-                      required
-                    />
+                    <textarea name="message" id="message" required />
                   </div>
-                  <Button text={"SEND MESSAGE"} styles={{ float: "right" }} />
+                  <Breakpoint customQuery="(min-width: 768px)">
+                    <Button text={"SEND MESSAGE"} styles={{ float: "right" }} />
+                  </Breakpoint>
+                  <Breakpoint customQuery="(max-width: 768px)">
+                    <Button text={"SEND MESSAGE"} styles={{ width: "100%" }} />
+                  </Breakpoint>
                 </form>
               </div>
             </div>
@@ -503,7 +502,7 @@ const Content = () => {
       ) : null}
       <style jsx="true">{`
         html body {
-          overflow: ${showGetStartedModal ? "hidden" : "scroll"};
+          overflow: ${showGetStartedModal || showContactModal ? "hidden" : "scroll"};
           overflow-x: hidden;
         }
       `}</style>
