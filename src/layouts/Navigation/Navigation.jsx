@@ -41,9 +41,7 @@ const Navigation = () => {
         function handler(event) {
             if (hamburgerOpen) {
                 if (!ref.current?.contains(event.target)) {
-                    // change starts here
                     setHamburgerOpen(false)
-                    // change starts here
                 }
             }
         }
@@ -65,7 +63,7 @@ const Navigation = () => {
                 </div>
                 <div onClick={handleModal}>
                     <HeadShake>
-                        <Button text={'CONTACT US'}/>
+                        <Button text={'CONTACT US'} styles={{width: '10rem'}}/>
                     </HeadShake>
                 </div>
                 {
@@ -74,7 +72,7 @@ const Navigation = () => {
                             <div className="contact-us-modal-wrapper">
                                 <div className="contact-us-modal-left">
                                     <h1>Contact us</h1>
-                                    <h4>Fill up the form and our team will get back to you within 24 hours.</h4>
+                                    <h4>Fill up the form and our team will get <br/> back to you within 24 hours.</h4>
                                     <a href="#" className="emailMobile">
                                         <img src={mailIcon} alt="email"/>
                                         <p>contactl@gmail.com</p>
@@ -100,7 +98,7 @@ const Navigation = () => {
                                             </div>
                                             <div className="contact-form-item">
                                                 <h5>Message</h5>
-                                                <textarea name="message" id="message" cols="25" rows="5" required/>
+                                                <textarea name="message" id="message" required/>
                                             </div>
                                             <Breakpoint customQuery="(min-width: 768px)">
                                                 <Button text={'SEND MESSAGE'} styles={{float: 'right'}}/>
@@ -159,7 +157,8 @@ const Navigation = () => {
             <style jsx="true">{`
 
               html body {
-                overflow: ${hamburgerOpen || showModal ? 'hidden' : 'scroll'}
+                overflow: ${hamburgerOpen || showModal ? 'hidden' : 'scroll'};
+                overflow-x: hidden;
               }
 
               .navigation ul {
@@ -183,18 +182,16 @@ const Navigation = () => {
                 font-size: 7vw;
               }
               
-              @media (max-width: 425px){
-                .navigation ul {
-                  display: ${hamburgerOpen ? 'inline' : 'none'};
-                  background-color: #fff;
-                  height: 100vh;
-                  width: 100%;
-                  position: fixed;
-                  left: 0;
-                  z-index: 15;
-                  padding: 2rem;
-                  margin: 4rem 0 0 0;
-                }
+              .navigation ul {
+                display: ${hamburgerOpen ? 'inline' : 'none'};
+                background-color: #fff;
+                height: 100vh;
+                width: 100%;
+                position: fixed;
+                left: 0;
+                z-index: 15;
+                padding: 2rem;
+                margin: 4rem 0 0 0;
               }
               
               @media (min-width: 426px) {
@@ -204,18 +201,6 @@ const Navigation = () => {
                   padding-top: 10px;
                   margin-left: 10px;
                   z-index: 6;
-                }
-
-
-                .navigation ul {
-                  display: ${hamburgerOpen ? 'inline' : 'none'};
-                  background-color: #fff;
-                  height: 100vh;
-                  width: 50vw;
-                  position: fixed;
-                  z-index: 15;
-                  padding: 2rem;
-                  margin: 4rem 0 0 0;
                 }
                 
                 .navigation ul li {

@@ -137,6 +137,13 @@ const Header = () => {
                     </Modal>
                 ) : null
             }
+
+            <style jsx="true">{`
+                html body{
+                    overflow: ${showModal ? 'hidden' : 'scroll'}
+                    overflow-x: hidden;
+                }
+            `}</style>
         </div>
     )
 }

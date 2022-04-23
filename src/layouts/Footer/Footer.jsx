@@ -64,16 +64,16 @@ const Footer = () => {
                                     <a href="tel:+123456987000">+123456987000</a>
                                 </div>
                             </div>
-                            <div style={{marginTop: '4rem'}}>
+                            <div style={{marginTop: '2rem'}}>
                                 <div>
-                                    <p style={{marginBottom: '1rem'}}>Washd.id</p>
+                                    <p>Washd.id</p>
                                 </div>
-                                <div style={{display: 'flex'}}>
+                                <div style={{display: 'flex', marginTop: '1rem'}}>
                                     <img src={locationIcon} alt="location"/>
                                     <a href="#">Norway, Address 8/1</a>
                                 </div>
                             </div>
-                            <div style={{marginTop: '4rem'}}>
+                            <div style={{margin: '2rem 0 2rem 0'}}>
                                 <SocialNetworks/>
                             </div>
                             <p style={{marginTop: '4rem'}}>Privacy Policy</p>
@@ -97,7 +97,7 @@ const Footer = () => {
                   display: flex;
                   justify-content: center;
                   margin-bottom: 3rem;
-                  height: 7rem;
+                  height: auto;
                 }
             `}</style>
         </>

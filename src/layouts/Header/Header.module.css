@@ -22,12 +22,13 @@
 
 .headerDescription{
     width: 45%;
+    margin-top: 2rem
 }
 
 .headerTitleWrapper{
     position: absolute;
-    left: 3rem;
-    top: 20%;
+    left: 10rem;
+    top: 10rem;
     z-index: 10;
     animation-fill-mode: inherit !important;
 }
@@ -46,14 +47,8 @@
     backdrop-filter: blur(12px);
 }
 
-@media only screen and (min-width: 1024px) and (max-width: 1200px){
-    .bluredBlock{
-        width: 500px;
-    }
-}
-
 .bluredBlock h1{
-    font-size: 5vw;
+    font-size: 68px;
 }
 
 .headerBlock{
@@ -67,13 +62,6 @@
     width: 70%;
 }
 
-/*.leftHeaderBlock{*/
-/*    display: flex;*/
-/*    justify-content: center;*/
-/*    align-items: center;*/
-/*}*/
-
-
 .bluredBlockMobile{
     width: 90%;
     height: max-content;
@@ -82,7 +70,6 @@
     align-items: center;
     background: rgba(255, 255, 255, 0.63);
     backdrop-filter: blur(12px);
-    margin-top: 2rem;
 }
 
 .bluredBlockMobile > h1{
@@ -108,10 +95,20 @@
     animation-fill-mode: inherit !important;
 }
 
+/* RESPONSIVE */
+@media only screen and (min-width: 1024px) and (max-width: 1200px){
+    .bluredBlock{
+        width: 500px;
+    }
+}
 
 @media only screen and (max-width: 768px){
     .headerWrapper{
         padding: 1rem;
+    }
+
+    .headerBlockMobile > div > div{
+        margin-top: 2rem;
     }
 }
 

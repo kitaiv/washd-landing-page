@@ -8,8 +8,17 @@
 
 /*//////Media queries///////*/
 
+@media only screen and (min-width: 768px) {
+    .contact-form-item{
+        width: 360px;
+    }
+}
+
 @media only screen and (max-width: 767px){
 
+    .contact-us-modal-left{
+      margin-right: 0 !important  
+    }
 
     .hamburger{
         display: flex;
@@ -39,7 +48,7 @@
     }
 
     h1{
-        font-size: 6vh;
+        font-size: 38px !important;
     }
 
     .container{

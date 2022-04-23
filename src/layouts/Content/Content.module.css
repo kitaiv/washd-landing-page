@@ -19,6 +19,10 @@ section{
     flex-direction: column;
 }
 
+.section3 h1{
+    margin-bottom: 2rem;
+}
+
 
 .section1 > div > div{
     display: flex;
@@ -32,6 +36,10 @@ section{
     width: 60%;
 }
 
+.section1ContentWrapper h4{
+    margin-top: 2rem
+}
+
 .section2 > h1{
     text-align: center;
 }
@@ -42,6 +50,7 @@ section{
     flex-direction: row;
     justify-content: space-evenly;
     flex-wrap: wrap;
+    margin-top: 2rem;
 }
 
 .howitworks1{
@@ -58,7 +67,7 @@ section{
     justify-content: space-evenly;
     align-items: center;
     width: 100%;
-    margin-bottom: 4rem;
+    margin-bottom: 2rem;
 }
 
 .cardWrapper{
@@ -120,6 +129,7 @@ section{
     justify-content: space-evenly;
 }
 
+
 .faqSubHeader p{
     font-style: normal;
     font-weight: 400;
@@ -165,7 +175,7 @@ section{
 }
 
 
-/*//////RESPONSIVE//////*/
+/* RESPONSIVE */
 
 
 @media screen and (max-width: 1780px){
@@ -185,7 +195,7 @@ section{
     }
 
     .section1ContentWrapper h1 {
-        font-size: 38px;
+        margin-bottom: 1rem;
     }
 
     .section1 div{
@@ -197,7 +207,7 @@ section{
         justify-content: center;
         align-items: flex-start;
         flex-direction: column;
-        margin: unset !important;
+        margin-top: 2rem;
     }
 
     .cardsContainer div{
@@ -275,7 +285,6 @@ section{
         height: auto;
         background: #E3E3E3;
         overflow: hidden;
-        padding: 0 0 2rem 0;
     }
 
     .startWorkingText h1{

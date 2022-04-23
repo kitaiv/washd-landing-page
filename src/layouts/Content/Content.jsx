@@ -361,7 +361,7 @@ const Content = () => {
                             <img src={startWorkingImgMobile} alt="start-working-mobile" height="100%;"/>
                         </div>
                         <div className={s.startWorkingText}>
-                            <h1>Start working<br/> with <span>Washd</span> now</h1>
+                            <h1>Start working with <span>Washd</span> now</h1>
                             <div onClick={handleGetStartedModal}>
                                 <HeadShake>
                                     <Button text={'GET STARTED'} styles={{width: '90%'}}/>
@@ -479,6 +479,12 @@ const Content = () => {
                     </Modal>
                 ) : null
             }
+            <style jsx="true">{`
+                html body{
+                    overflow: ${showGetStartedModal ? 'hidden' : 'scroll'};
+                    overflow-x: hidden;
+                }
+            `}</style>
         </div>
     )
 }
