@@ -3,7 +3,7 @@ import classnames from "classnames";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import s from "../assets/style/style.module.css";
-import "swiper/css/effect-cards";
+import "swiper/css/effect-coverflow";
 
 import userpic1 from "../assets/images/userpic-1.svg";
 import userpic2 from "../assets/images/userpic-2.svg";
@@ -11,7 +11,7 @@ import userpic3 from "../assets/images/userpic-3.svg";
 import leftbtnIcon from "../assets/images/left-btn-icon.svg";
 import rightbtnIcon from "../assets/images/right-btn-icon.svg";
 
-import { Navigation, EffectCards } from "swiper";
+import { Navigation, EffectCoverflow } from "swiper";
 import { Breakpoint } from "react-socks";
 
 export default function TestimonialsSlider() {
@@ -83,13 +83,21 @@ export default function TestimonialsSlider() {
       <Breakpoint small down>
         <div className={s.sliderWrapper}>
           <Swiper
-            effect={"cards"}
+            effect={"coverflow"}
             grabCursor={true}
-            modules={[EffectCards]}
-            className="mySwiper"
             centeredSlides={true}
-            slidesPerView={"auto"}
-            // navigation={true}
+            slidesPerView={2}
+            coverflowEffect={{
+              rotate: 25,
+              stretch: -50,
+              depth: 100,
+              modifier: 1,
+              slideShadows:false,
+              scale: 1
+            }}
+            pagination={true}
+            modules={[EffectCoverflow]}
+            className="mySwiper"
             loop={true}
           >
             {testimonials.map((el, key) => (

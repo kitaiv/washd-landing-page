@@ -55,6 +55,10 @@
     justify-content: space-evenly;
 }
 
+.testimonialsCard h3{
+    margin-top: 1rem
+}
+
 .testimonialsCard > div > div h4{
     width: 50%;
     font-style: normal;
@@ -62,7 +66,7 @@
 }
 
 .sliderWrapper{
-    width: 90%;
+    width: 100%;
     height: auto;
     display: flex;
     justify-content: space-evenly;
@@ -77,10 +81,14 @@
     line-height: 150%;
 }
 
-/* @media only screen and (max-width: 767px){
-    .testimonialsCard{
-        width: 100% !important;
-        height: auto !important;
+@media only screen and (max-width: 481px){
+    .testimonialsCard h3, h4{
+        font-size: 14px;
+        margin-top: 1rem !important
     }
-} */
+
+    .testimonialsCard{
+        padding: 1rem
+    }
+}
 
