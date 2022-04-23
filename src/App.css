@@ -65,6 +65,10 @@ span {
   color: #3082f7;
 }
 
+input {
+  width: 100%;
+}
+
 .swiper-pagination-bullet-active {
   --swiper-theme-color: #1b1f3b;
 }
@@ -418,6 +422,10 @@ form div textarea {
 }
 
 @media only screen and (max-width: 768px) {
+  .contact-form-item {
+    margin-bottom: 0.5rem;
+  }
+  
   h2 {
     font-size: 25px;
   }
@@ -456,12 +464,11 @@ form div textarea {
 
   .contact-us-modal-wrapper h1 {
     font-size: 38px !important;
-    margin: 0 0 2rem 0;
   }
 
   .contact-us-modal-wrapper h4 {
     font-size: 18px;
-    margin: 0.5rem 0 1rem 0 !important;
+    margin: 0 !important;
   }
 
   .contact-us-modal-right {
@@ -485,10 +492,6 @@ form div textarea {
     font-size: small !important;
   }
 
-  .contact-form-item {
-    padding: 0.5rem !important;
-  }
-
   .contact-form-item input {
     font-size: small !important;
   }
@@ -498,7 +501,7 @@ form div textarea {
   }
 
   .socialNetworksWrapper {
-    margin-top: 1rem;
+    margin-top: 0.5rem;
   }
 
   .contact-us-modal-wrapper a img {
