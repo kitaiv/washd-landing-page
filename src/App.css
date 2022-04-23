@@ -89,6 +89,10 @@ input {
   align-items: center;
 }
 
+.swiper-3d .swiper-slide-shadow{
+    background: none !important
+}
+
 .swiper-button-next {
   color: #000;
   right: 0;
