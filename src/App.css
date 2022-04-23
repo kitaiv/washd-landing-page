@@ -66,7 +66,7 @@ span {
 }
 
 input {
-  width: 100%;
+  width: 95%;
 }
 
 .swiper-pagination-bullet-active {
@@ -425,7 +425,7 @@ form div textarea {
   .contact-form-item {
     margin-bottom: 0.5rem;
   }
-  
+
   h2 {
     font-size: 25px;
   }
